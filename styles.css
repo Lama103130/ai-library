@@ -1,0 +1,361 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+
+
+/* Header styling to contain both Navbar and Hero with video background */
+.header {
+    position: relative;
+    width: 100%;
+    height: 600px; 
+    overflow: hidden;
+}
+
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; 
+    filter: brightness(0.5); 
+}
+
+/* Navbar styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: transparent; 
+    padding: 1rem 2rem;
+    color: #fff;
+    position: relative;
+    z-index: 1;
+}
+
+.navbar .logo img {
+    width: 100px;
+}
+
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar .nav-links li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+/* Hero section styling */
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    z-index: 1;
+    margin-top: 50px;
+}
+
+.hero h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+.search-bar {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    z-index: 1;
+}
+
+.search-bar input {
+    padding: 12px 16px;
+    font-size: 20px;
+    border: none;
+    border-radius: 4px;
+    width: 250px;
+    outline: none;
+}
+
+.search-bar button {
+    padding: 12px 20px;
+    background-color: #DB592A;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+
+
+.loading {
+  border: 16px solid #1B365C;
+  right:90px;
+  border-radius: 50%;
+  border-top: 16px solid #DB592A;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+  position: absolute;
+  left: 45%;
+ 
+  
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+
+
+/* Style for Results Section */
+.results {
+   
+    padding: 2rem;
+    background-color: #f4f4f9;
+}
+
+
+.results-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.book-item {
+    flex: 1 1 300px; /* Passer til kortlayout */
+    padding: 1rem;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+
+/* artikkler======================================================================= */
+.container {
+    max-width: 1200px;  /* Begrenset bredde */
+    margin: 0 auto;     /* Sentralisert innhold */
+    padding: 10px;      /* Litt padding rundt innholdet */
+}
+
+
+
+.articles h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.article-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+article {
+    width: 30%;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+article img {
+    width: 100%;
+    height: 500px;
+    margin-bottom: 15px;
+}
+
+
+
+
+
+/* Slider (still full width) */
+.slider {
+    
+    height: 500px;
+    padding-top: 70px;
+    overflow: hidden;
+    margin: 20px 0;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.slide img {
+    width: 100%;
+    height: 700px;
+    display: block;
+}
+
+
+
+/* Boxed layout for counter section */
+.counter {
+    max-width: 1400px;  /* Begrenset bredde */
+    margin: 0 auto;
+    background: #7EA1C4;
+    color: #1B365C;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.counter h2 {
+    margin-bottom: 30px;
+}
+
+.counter-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.count-item {
+    font-size: 48px;
+}
+
+
+/* Full width for footer========================================================== */
+.footer {
+    width: 100%;
+    background: #1B365C;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    font-size: 24px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Responsive adjustments for mobile screens */
+
+
+
+
+
+/* Articles Section */
+@media (max-width: 768px) {
+    /* Stack articles vertically */
+    .article-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    article {
+        width: 100%;
+    }
+
+    /* Adjust image height */
+    article img {
+        height: auto;
+    }
+}
+
+/* Slider Section */
+@media (max-width: 768px) {
+    .slider {
+        height: 300px; /* Reduce height for smaller screens */
+    }
+
+    .slide img {
+        height: 300px;
+        object-fit: cover;
+    }
+}
+
+/* Counter Section */
+@media (max-width: 768px) {
+    .counter-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .count-item {
+        font-size: 36px;
+    }
+}
+
+
+
+@media (max-width: 768px) {
+    .loading {
+        
+        right:50px;
+      
+        width: 50px;
+        height: 50px;
+        left: 45%;
+       
+        
+      }
+
+      /* Footer adjustments for mobile */
+.navbar .nav-links li a {
+    font-size: 16px;
+}
+
+.navbar .logo img {
+    width: 60px;
+}
+
+.container {
+    max-width: 300px;  /* Begrenset bredde */
+    margin: 0 auto;     /* Sentralisert innhold */
+    padding: 10px;      /* Litt padding rundt innholdet */
+}
+
+article img {
+    width: 100%;
+    height: 350px;
+  
+}
+
+
+}
+
+
+

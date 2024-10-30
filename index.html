@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Nettside med Slider og Counter</title>
+    <!-- Google Fonts - Roboto -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+   
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <video autoplay loop muted playsinline class="background-video">
+            <source src="images/Gen-3 Alpha , abstract illustratio, Cropped - _c992a030-, M 5_1.mp4" type="video/mp4">
+            Din nettleser støtter ikke videoelementet.
+        </video>
+    
+        <!-- Navbar -->
+        <nav class="navbar">
+            <div class="logo"><img id="logo" src="images/logo.png" alt="logo"></div>
+            <ul class="nav-links">
+                <li><a href="#hero">Søk</a></li>
+                <li><a href="#articles">Bøker</a></li>
+                <li><a href="#counter">Besøkende</a></li>
+            </ul>
+        </nav>
+    
+        <!-- Hero Section -->
+        <section id="hero" class="hero">
+            <h1>Velkommen til vårt bibliotek</h1>
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Søk etter bøker..." />
+                <button id="searchButton">Søk</button>
+            </div>
+        </section>
+    </header>
+
+        <!-- Resultater Section -->
+    <section id="resultsSection" class="results">
+        <div class="container">
+            <div id="loading" class="loading" style="display: none;"></div>
+            <div id="results" class="results-container"></div> 
+        </div>
+    </section>
+
+    <!-- Slider Section -->
+    <section class="slider">
+        <div class="container">
+            <div class="slides">
+                <div class="slide">
+                    <img src="images/Leonardo_Kino_XL_A_focused_student_sitting_at_a_desk_typing_on_2.jpg" alt="Slide 1">
+                </div>
+                <div class="slide">
+                    <img src="images/Leonardo_Kino_XL_An_open_book_on_the_table_with_gentle_rays_of_0.jpg" alt="Slide 2">
+                </div>
+                <div class="slide">
+                    <img src="images/_dda765af-cc87-46c1-a6d9-dc2410719936.jpg" alt="Slide 3">
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Articles Section -->
+    <section id="articles" class="articles">
+        <div class="container">
+            <h2>Nyeste bøker</h2>
+        <div class="article-container">
+            <article>
+                <img src="images/bok1.webp" alt="book 1">
+                <h3>The Atheism Dellusion</h3>
+                <p>Ahmad Alhasan </p>
+                <p>Den evige debatten mellom religion og vitenskap er avgjort med dette verket, hvor forfatteren klargjør opprinnelsen til Adam og hvordan religiøse trosretninger er kompatible med moderne vitenskap. Dette skjer i en tid hvor vitenskapelig ateisme dominerer, mens forsøkene på å forsvare guddommelige religioner har mislyktes i å rettferdiggjøre troen</p>
+            </article>
+            <article>
+                <img src="images/a9j327r-QxSP1toUhPdR4A.webp" alt="book 2">
+                <h3>Beyond the Horizon</h3>
+                <p>M. M. Kaye</p>
+                <p>Boken følger historien om en ung kvinne, som reiser fra England til India på 1900-tallet. Gjennom hennes reise opplever hun ikke bare de fysiske utfordringene ved å navigere i et fremmed land, men også de emosjonelle og psykologiske aspektene ved å finne sin plass i en ny kultur.</p>
+            </article>
+            <article>
+                <img src="images/helse.webp" alt="book 3">
+                <h3>The Wellness Code</h3>
+                <p>Dr. Robert Zembroski</p>
+                <p>Boken fokuserer på hvordan man kan oppnå optimal helse og velvære gjennom en helhetlig tilnærming. 
+                    Boken kombinerer vitenskapelige prinsipper med praktiske råd, og tar for seg emner som ernæring, trening, mental helse og livsstil.</p>
+            </article>
+        </div>
+        </div>
+    </section>
+
+    
+
+
+    <!-- Counter Section -->
+    <div class="container">
+    <section id="counter" class="counter">
+        
+            <h2>Antall besøkende på nettsiden</h2>
+         <div class="counter-container">
+            <div class="count-item" id="visitorCount">0</div>
+            </div>
+        
+    </section>
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer" class="footer">
+        <p>© 2024 Innføring Generative AI</p>
+    </footer>
+
+    
+       
+   <script src="script.js"></script>
+</body>
+</html>
